@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zach Johnson</title>
+  <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
+    /> -->
+  <meta name="description" content="Zach Johnson. This my website.">
+
+  <script src="https://pixijs.download/release/pixi.js"></script>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background: linear-gradient(#1a99bb, #69dfff);
+    }
+
+    canvas {
+      z-index: -2;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    h1 {
+      font-size: 5rem;
+    }
+    h2 {
+      font-size: 4rem;
+    }
+
+    #pop {
+      z-index: 2;
+      position: absolute;
+    }
+
+    img {
+      width: 100%;
+      max-width: 922px;
+      height: auto;
+      padding: 18px;
+    }
+
+    .my-fantastic-section {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      background: linear-gradient(to bottom right, #0b3c4a 65%, #ffee2e 50%);
+      /* background: #0b3c4a; */
+      color: #daf7ff;
+      padding: 2rem;
+    }
+    .my-fantastic-section div {
+      width: 50%;
+      min-width: 400px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .my-fantastic-section div > * {
+      max-width: 80%;
+    }
+
+    .land {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>WELCOME EVERYONE!!!!!</h1>
+  <h2>WOOOOOOOOOOOOOOOO 🦥</h2>
+
+  <a class="land" href="#land">PREPARE FOR TAKEOFF</a>
+
+  <p style="height: 400px; width: 100%">
+    4 thee interested <button onclick="pop()">whowhowowhowh</button><br>
+    <button onclick="unpop()">YEAT</button>
+  </p>
+  
+  <img src="/nature-walk.webp" alt="bridge">
+  <img src="/wordart.png" alt="nature" onclick="alert('I am excited to say that I have always really enjoyed clip art. And nature is far and away one of my favorite things.')">
+
+  <section class="my-fantastic-section" id="land">
+    <div>
+      <h2>In a world, where everything is imagined</h2>
+    </div>
+    <div>
+      <img src="/space.gif" alt="SPACE">
+    </div>
+
+  </section>
+
+  <script src="/pixi-sticks.mjs" module></script>
+  <script>
+    function randomIntFromInterval(min, max) { // min and max included 
+      return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+    function pop() {
+      const container = document.createElement('div');
+      // container.width = 400;
+      // container.height = 800;
+      container.id = "pop";
+      container.classList.add('popped');
+      container.style.left = `${randomIntFromInterval(0, window.innerWidth - 400)}px`;
+      container.style.top = `${randomIntFromInterval(0, window.innerHeight - 10)}px`;
+
+      const frame = document.createElement('iframe');
+      frame.src = 'http://www.staggeringbeauty.com/';
+      frame.width = 400;
+      frame.height = 800;
+
+      const x = document.createElement('button');
+      x.textContent = "X";
+      x.style.color = "#ff0000";
+      x.style.fontSize = '100px';
+      x.style.position = 'absolute';
+      x.style.top = 0;
+      x.style.right = 0;
+      x.style.background = "#000000";
+      x.style.zIndex = 3;
+
+      x.onclick = function () {
+        document.getElementById("pop").outerHTML = "";
+      }
+
+      container.appendChild(frame);
+      container.appendChild(x);
+
+
+      document.body.appendChild(container);
+    }
+  
+    window.onload = function() {
+      const t = randomIntFromInterval(1,5);
+      for (let i = 0; i < t; i++) {
+        pop();
+      }
+    }
+
+    function unpop() {
+      [...document.getElementsByClassName('popped')].forEach(el => {
+        el.outerHTML = '';
+      })
+    }
+  </script>
+  
+</body>
+</html>
