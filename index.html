@@ -121,9 +121,11 @@
       container.style.top = `${randomIntFromInterval(0, window.innerHeight - 10)}px`;
 
       const frame = document.createElement('iframe');
-      frame.src = 'http://www.staggeringbeauty.com/';
+      frame.src = `https://www.youtube.com/embed/1MobY_vR7-g`;
       frame.width = 400;
       frame.height = 800;
+      frame.frameBorder = '0';
+      frame.allowFullscreen = true;
 
       const x = document.createElement('button');
       x.textContent = "X";
@@ -147,10 +149,7 @@
     }
   
     window.onload = function() {
-      const t = randomIntFromInterval(1,5);
-      for (let i = 0; i < t; i++) {
-        pop();
-      }
+      pop();
     }
 
     function unpop() {
