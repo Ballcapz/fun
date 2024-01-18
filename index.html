@@ -1,115 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zach Johnson</title>
-  <link rel="icon" type="image/x-icon" href="/sloth.png">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Zach Johnson</title>
+        <link rel="icon" type="image/x-icon" href="/sloth.png" />
 
-  <meta name="description" content="Zach Johnson. This my website.">
+        <meta name="description" content="Zach Johnson. This my website." />
 
-  <script src="https://pixijs.download/release/pixi.js"></script>
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
+        <script src="https://pixijs.download/release/pixi.js"></script>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
 
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      background: linear-gradient(#1a99bb, #69dfff);
-    }
+            body {
+                font-family:
+                    system-ui,
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    "Segoe UI",
+                    Roboto,
+                    Oxygen,
+                    Ubuntu,
+                    Cantarell,
+                    "Open Sans",
+                    "Helvetica Neue",
+                    sans-serif;
+                background: linear-gradient(#1a99bb, #69dfff);
+            }
 
-    canvas {
-      z-index: -2;
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
+            canvas {
+                z-index: -2;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
 
-    h1 {
-      font-size: 5rem;
-    }
-    h2 {
-      font-size: 4rem;
-    }
+            h1 {
+                font-size: 5rem;
+            }
+            h2 {
+                font-size: 4rem;
+            }
 
-    #pop {
-      z-index: 2;
-      position: absolute;
-    }
+            #pop {
+                z-index: 2;
+                position: absolute;
+            }
 
-    img {
-      width: 100%;
-      max-width: 922px;
-      height: auto;
-      padding: 18px;
-    }
+            img {
+                width: 100%;
+                max-width: 922px;
+                height: auto;
+                padding: 18px;
+            }
 
-    .my-fantastic-section {
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      background: linear-gradient(to bottom right, #0b3c4a 65%, #ffee2e 50%);
-      /* background: #0b3c4a; */
-      color: #daf7ff;
-      padding: 2rem;
-    }
-    .my-fantastic-section div {
-      width: 50%;
-      min-width: 400px;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .my-fantastic-section div > * {
-      max-width: 80%;
-    }
+            .my-fantastic-section {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                background: linear-gradient(
+                    to bottom right,
+                    #0b3c4a 65%,
+                    #ffee2e 50%
+                );
+                /* background: #0b3c4a; */
+                color: #daf7ff;
+                padding: 2rem;
+            }
+            .my-fantastic-section div {
+                width: 50%;
+                min-width: 400px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .my-fantastic-section div > * {
+                max-width: 80%;
+            }
 
-    .land {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-    }
+            .land {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+            .selected-works {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background: #ffee2e;
+                color: #0b3c4a;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>WELCOME EVERYONE!!!!!</h1>
+        <h2>WOOOOOOOOOOOOOOOO 🦥</h2>
 
-  </style>
-</head>
-<body>
-  <h1>WELCOME EVERYONE!!!!!</h1>
-  <h2>WOOOOOOOOOOOOOOOO 🦥</h2>
+        <a class="land" href="#land">PREPARE FOR TAKEOFF</a>
 
-  <a class="land" href="#land">PREPARE FOR TAKEOFF</a>
+        <p style="height: 400px; width: 100%">
+            4 thee interested <button onclick="pop()">whowhowowhowh</button
+            ><br />
+            <button onclick="unpop()">YEAT</button>
+        </p>
 
-  <p style="height: 400px; width: 100%">
-    4 thee interested <button onclick="pop()">whowhowowhowh</button><br>
-    <button onclick="unpop()">YEAT</button>
-  </p>
-  
-  <img src="/nature-walk.webp" alt="bridge">
-  <img src="/wordart.png" alt="nature" onclick="alert('I am excited to say that I have always really enjoyed clip art. And nature is far and away one of my favorite things.')">
+        <img src="/nature-walk.webp" alt="bridge" />
+        <img
+            src="/wordart.png"
+            alt="nature"
+            onclick="alert('I am excited to say that I have always really enjoyed clip art. And nature is far and away one of my favorite things.')"
+        />
 
-  <section class="my-fantastic-section" id="land">
-    <div>
-      <h2>In a world, where everything is imagined</h2>
-    </div>
-    <div>
-      <img src="/space.gif" alt="SPACE">
-    </div>
+        <section class="my-fantastic-section" id="land">
+            <div>
+                <h2>In a world, where everything is imagined</h2>
+            </div>
+            <div>
+                <img src="/space.gif" alt="SPACE" />
+            </div>
+        </section>
+        <section style="background: #feacde">
+            <img
+                src="/iata-logo.png"
+                alt="O O O 🪄"
+                title="O O O 🪄 - But forreal shout out to the iata!!"
+            />
+        </section>
 
-  </section>
-  <section style="background: #feacde;">
-    <img src="/iata-logo.png" alt="O O O 🪄" title="O O O 🪄 - But forreal shout out to the iata!!">
-  </section>
+        <section class="selected-works">
+            <h2>Selected works in D Major (you can find them here)</h2>
+            <a href="/selected-works.html">Actually HERE</a>
+        </section>
 
-  <script src="/pixi-sticks.mjs" module></script>
-  <script>
-    function randomIntFromInterval(min, max) { // min and max included 
+        <script src="/pixi-sticks.mjs" module></script>
+        <!-- <script>
+    function randomIntFromInterval(min, max) { // min and max included
       return Math.floor(Math.random() * (max - min + 1) + min)
     }
     function pop() {
@@ -148,7 +185,7 @@
 
       document.body.appendChild(container);
     }
-  
+
     window.onload = function() {
       pop();
     }
@@ -158,7 +195,6 @@
         el.outerHTML = '';
       })
     }
-  </script>
-  
-</body>
+  </script> -->
+    </body>
 </html>
